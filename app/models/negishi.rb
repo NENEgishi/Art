@@ -1,0 +1,2 @@
+class Negishi < ApplicationRecord
+end
