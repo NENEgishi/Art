@@ -8,6 +8,7 @@ class NegishesController < ApplicationController
   end
 
   def edit
+    @negishi=Negishi.find(params[:id])
   end
 
   def show
@@ -24,6 +25,9 @@ class NegishesController < ApplicationController
   end
 
   def update
+    negishi=Negishi.new(negishi_params)
+    negishi.save(negishi_params)
+    redirect_to negish_path(negishi.id)
   end
 
   private
