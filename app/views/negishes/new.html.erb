@@ -1,2 +1,8 @@
-<h1>Negishes#new</h1>
-<p>Find me in app/views/negishes/new.html.erb</p>
+<h1>新規投稿</h1>
+<%=form_for @negishi, url:'/negishes' do |f| %>
+<h4>Title</h4>
+<%=f.text_field :title%>
+<h4>Body</h4>
+<%=f.text_area :body%><br>
+<%=f.submit '投稿' %>
+<% end %>
