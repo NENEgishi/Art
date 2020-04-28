@@ -1,2 +1,9 @@
-<h1>Negishes#index</h1>
-<p>Find me in app/views/negishes/index.html.erb</p>
+<h1>投稿一覧</h1>
+<% @negishes.each do |c| %>
+<h4>Title</h4>
+<%=link_to c.title, negish_path(c.id) %>
+<h4>Body</h4>
+<%=c.body%>
+<% end %><br>
+<%=link_to 'Topへ', root_path %>
+<!-- link_to c.title, negish_path(c.id) -->
