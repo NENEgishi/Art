@@ -37,6 +37,6 @@ class NegishesController < ApplicationController
 
   private
   def negishi_params
-    params.require(:negishi).permit(:title, :body, :image)
+    params.require(:negishi).permit(:title, :body)
   end
 end
