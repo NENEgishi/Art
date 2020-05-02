@@ -4,6 +4,7 @@ class CreateNegishis < ActiveRecord::Migration[5.2]
       t.string :title
       t.text :body
       t.string :name
+      t.string :image_id
 
       t.timestamps
     end
