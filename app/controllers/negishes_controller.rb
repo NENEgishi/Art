@@ -22,13 +22,17 @@ class NegishesController < ApplicationController
   end
 
   def destroy
+    @negishi=Negishi.find(params[:id])
+    # negishi=Negishi.new(negishi_params)
+    @negishi.destroy
+    redirect_to negishes_path
   end
 
   def update
     @negishi=Negishi.find(params[:id])
     # negishi=Negishi.new(negishi_params)
     @negishi.update(negishi_params)
-    redirect_to negish_path(@negishi.id)
+    redirect_to negish_path(negishi.id)
   end
 
   private
