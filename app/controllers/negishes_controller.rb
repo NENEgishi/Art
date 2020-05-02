@@ -25,9 +25,10 @@ class NegishesController < ApplicationController
   end
 
   def update
-    negishi=Negishi.new(negishi_params)
-    negishi.save(negishi_params)
-    redirect_to negish_path(negishi.id)
+    @negishi=Negishi.find(params[:id])
+    # negishi=Negishi.new(negishi_params)
+    @negishi.update(negishi_params)
+    redirect_to negish_path(@negishi.id)
   end
 
   private
