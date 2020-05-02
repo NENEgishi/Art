@@ -1,5 +1,5 @@
 <h1>編集画面</h1>
-<%=form_for @negishi, url:"negish_path(@negishi.id)" do |k| %>
+<%=form_for @negishi, url:negish_path(@negishi.id) do |k| %>
 <h4>Title</h4>
 <%=k.text_field :title%>
 <h4>Body</h4>
