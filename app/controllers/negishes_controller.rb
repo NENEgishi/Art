@@ -32,11 +32,11 @@ class NegishesController < ApplicationController
     @negishi=Negishi.find(params[:id])
     # negishi=Negishi.new(negishi_params)
     @negishi.update(negishi_params)
-    redirect_to negish_path(negishi.id)
+    redirect_to negish_path(@negishi.id)
   end
 
   private
   def negishi_params
-    params.require(:negishi).permit(:title, :body)
+    params.require(:negishi).permit(:title, :body, :image)
   end
 end
