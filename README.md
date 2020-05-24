@@ -1,24 +1,23 @@
-# README
+# Art
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
+- 自分の絵を投稿することができるサイト
 
-Things you may want to cover:
+### サイトテーマ
+- 自分の絵を投稿して人からの評価をお貰えるサイトです
 
-* Ruby version
+### テーマを選んだ理由
+- 自分の絵を投稿して
 
-* System dependencies
+### ターゲットユーザ
+<...>
 
-* Configuration
+### 主な利用シーン
+<...>
 
-* Database creation
+## 設計書
 
-* Database initialization
+### 機能一覧
+<https://docs.google.com/spreadsheets/d/1UgK-6l38k5T81XjcTIn7CHnGRkB_sBXS5xQWAVshWmks/edit#gid=0>
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

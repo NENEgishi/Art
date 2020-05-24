@@ -6,6 +6,7 @@
 <%=c.body%>
 <h4>Image</h4>
 <%=attachment_image_tag c, :image, format: 'jpeg', size:'70x70', class:"profile_image", fallback:"no-image.jpg", size:'70x70' %>
+<%=link_to '削除', negish_path(c.id), method: :delete, "data-confirm" => "本当に削除しますか？" %>
 <% end %><br>
 <%=link_to 'Topへ', root_path %>
 <!-- link_to c.title, negish_path(c.id) -->
