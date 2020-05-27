@@ -1,12 +1,17 @@
 <h1>投稿一覧</h1>
+
 <% @negishes.each do |c| %>
-<h4>Title</h4>
-<%=link_to c.title, negish_path(c.id),class:"btn btn-primary btn-sm active" %>
-<h4>Body</h4>
-<%=c.body%>
-<h4>Image</h4>
-<%=attachment_image_tag c, :image, format: 'jpeg', size:'100x100', class:"profile_image", fallback:"no-image.jpg", size:'100x100' %>
-<%=link_to '削除', negish_path(c.id), method: :delete, "data-confirm" => "本当に削除しますか？",class:"btn btn-dark btn-sm active" %>
-<% end %><br>
+
+<table class="table table-striped">
+	<tr><th>Title</th></tr>
+	<tr><td><%=link_to c.title, negish_path(c.id) %></td></tr>
+	<tr><th>Body</th></tr>
+	<tr><td><%=link_to c.body, negish_path(c.id)%></td></tr>
+	<tr><th>Image</th></tr>
+	<tr><td><%=attachment_image_tag c, :image, format: 'jpeg', size:'100x100', class:"profile_image", fallback:"no-image.jpg", size:'100x100' %></td></tr>
+	<tr><td><%=link_to '削除', negish_path(c.id), method: :delete, "data-confirm" => "本当に削除しますか？",class:"btn btn-primary btn-sm active" %></td></tr>
+</table>
+
+<% end %>
+
 <%=link_to 'Topへ', root_path,class:"btn btn-warning btn-lg active" %>
-<!-- link_to c.title, negish_path(c.id) -->
