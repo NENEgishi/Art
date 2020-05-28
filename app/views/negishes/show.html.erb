@@ -1,5 +1,6 @@
 <h1>詳細画面</h1>
 <table class="table table-striped">
+
 	<tr><th>Title</th></tr>
 	<tr><td><%=@negishi.title%></td></tr>
 
@@ -8,11 +9,13 @@
 
 	<tr><th>Image</th></tr>
 	<tr><td><%=attachment_image_tag @negishi, :image, format: 'jpeg', size:'100x100', class:"profile_image", fallback:"no-image.jpg", size:'100x100'%></td></tr>
+
+	<tr><td><%=link_to '', edit_negish_path(@negishi),class: "btn btn-success btn-sm active glyphicon glyphicon-wrench" %></td></tr>
+
+	<tr><td><%=link_to '投稿一覧', negishes_path,class:"btn btn-success btn-sm active"%></td></tr>
+	
+	<tr><td><%=link_to '削除', negish_path(@negishi), method: :delete, "data-confirm" => "本当に削除しますか？",class:"btn btn-success btn-sm active" %></td></tr>
+
 </table>
 
-<%=link_to '投稿一覧', negishes_path,class:"btn btn-success btn-sm active"%>
-
-<%=link_to '編集へ', edit_negish_path(@negishi),class:"btn btn-success btn-sm active" %>
-
-<%=link_to '削除', negish_path(@negishi), method: :delete, "data-confirm" => "本当に削除しますか？",class:"btn btn-success btn-sm active" %>
-
+<!-- ,class:"btn btn-success btn-sm active" -->

@@ -1,14 +1,20 @@
 <h1>新規投稿</h1>
 
 <%=form_for @negishi, url:'/negishes' do |f| %>
+
 <table class="table table-striped">
+
 	<tr><th>Title</th></tr>
 	<tr><td><%=f.text_field :title%></td></tr>
+
 	<tr><th>Body</th></tr>
 	<tr><td><%=f.text_area :body%></td></tr>
+
 	<tr><th>Image</th></tr>
 	<tr><td><%= f.attachment_field :image,class:"btn btn-warning btn-sm active"%><br></td></tr>
+
 	<tr><td><%= f.submit "投稿",class:"btn btn-warning btn-lg active" %></td></tr>
 
 </table>
+
 <% end %>

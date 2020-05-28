@@ -3,13 +3,14 @@
 <% @negishes.each do |c| %>
 
 <table class="table table-striped">
-	<tr><th>Title</th></tr>
-	<tr><td><%=link_to c.title, negish_path(c.id) %></td></tr>
-	<tr><th>Body</th></tr>
-	<tr><td><%=link_to c.body, negish_path(c.id)%></td></tr>
-	<tr><th>Image</th></tr>
-	<tr><td><%=attachment_image_tag c, :image, format: 'jpeg', size:'100x100', class:"profile_image", fallback:"no-image.jpg", size:'100x100' %></td></tr>
-	<tr><td><%=link_to '削除', negish_path(c.id), method: :delete, "data-confirm" => "本当に削除しますか？",class:"btn btn-primary btn-sm active" %></td></tr>
+	<thead>
+		<tr><th>Title</th><th>Body</th><th>Image</th></tr>
+	</thead>
+	<tbody>
+		<tr><td><%=link_to c.title, negish_path(c.id) %></td><td><%=link_to c.body, negish_path(c.id)%></td><td><%=attachment_image_tag c, :image, format: 'jpeg', size:'100x100', class:"profile_image", fallback:"no-image.jpg", size:'100x100' %></td><td><%=link_to '削除', negish_path(c.id), method: :delete, "data-confirm" => "本当に削除しますか？",class:"btn btn-primary btn-sm active" %></td></tr>
+	</tbody>
+	
+	
 </table>
 
 <% end %>

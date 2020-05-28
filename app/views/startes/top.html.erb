@@ -1,11 +1,9 @@
 <% if flash[:out] %>
-
 <div class="flash">
 	<%= flash[:out] %>
 </div>
 
 <% elsif flash[:in] %>
-
 <div class="flash">
 	<%= flash[:in] %>
 </div>
@@ -15,14 +13,19 @@
 <h1>Art</h1>
 
 <table class="table table-striped">
-	<tr><td><h3>自分の絵を投稿して人からの評価をお貰えるサイトです</h3>
-	</td></tr>
-	<tr><td><%=link_to 'まずは投稿',new_negish_path,class:"btn btn-info btn-lg active"  %></td></tr>
+
+	<tr><td><h3>自分の絵を投稿して人からの評価をお貰えるサイトです</h3></td></tr>
 
 	<% if user_signed_in? %>
+	<tr><td><%=link_to 'まずは投稿',new_negish_path,class:"btn btn-info btn-lg active"  %></td></tr>
+
 	<tr><td><%=link_to 'ログアウト',destroy_user_session_path, method: :delete,class:"btn btn-info btn-lg active" %></td></tr>
+
 	<%else%>
+
 	<tr><td><%=link_to 'ログイン' ,new_user_session_path,class:"btn btn-info btn-lg active"%></td></tr>
+
 	<tr><td><%= link_to '新規会員' ,new_user_registration_path,class:"btn btn-info btn-lg active" %></td></tr>
 	<%end%>
+
 </table>

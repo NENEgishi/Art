@@ -5,5 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :start
   validates :name, presence: true,  length: { in: 2..20 }
-  validates :introduction, length: {maximum: 50}
+  # validates :introduction, length: {maximum: 50}
 end
